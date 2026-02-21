@@ -1,0 +1,8 @@
+.feedback-card { max-width:760px; margin: 14px 0; }
+.feedback-card .field { display:flex; flex-direction:column; gap:6px; margin-bottom:10px; }
+.feedback-card label { font-weight:700; font-size:0.9rem; }
+.feedback-card input[type="text"], .feedback-card textarea { padding:8px 10px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); font-size:0.95rem; }
+.feedback-card input[type="file"] { margin-top:6px; }
+.preview img { max-width:220px; max-height:160px; border-radius:8px; box-shadow:0 8px 20px rgba(2,6,23,0.06); margin-top:8px; }
+.feedback-card .actions { display:flex; align-items:center; gap:12px; }
+.feedback-card .status { color:var(--muted); font-weight:600; }

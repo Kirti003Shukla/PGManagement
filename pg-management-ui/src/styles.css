@@ -1,0 +1,48 @@
+/* Global typography and theme tweaks - use a modern, legible UI font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+	--font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	--bg: #f8fafc;
+	--surface: #ffffff;
+	--muted: #6b7280;
+	--text: #0f172a;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	color: var(--text);
+	background: var(--bg);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.45;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-sans);
+	color: var(--text);
+	margin: 0 0 8px 0;
+	letter-spacing: -0.2px;
+}
+
+/* Buttons, inputs and small UI elements */
+button, input, select, textarea {
+	font-family: var(--font-sans);
+	font-weight: 600;
+}
+
+/* Improve contrast for small text */
+.muted { color: var(--muted); }
+
+/* Utility: center page sections */
+.container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+
+/* Reduce default focus ring to a consistent, accessible style */
+:focus { outline: 3px solid rgba(37,99,235,0.18); outline-offset: 2px; }
+

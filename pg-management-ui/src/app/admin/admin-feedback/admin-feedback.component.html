@@ -1,0 +1,19 @@
+<section class="admin-feedback">
+  <h3>Feedback Submissions</h3>
+  <div *ngIf="!items || items.length === 0" class="muted">No feedback yet.</div>
+  <ul class="list">
+    <li *ngFor="let it of items" class="item">
+      <div class="meta">
+        <div class="who">{{ it.name || 'Anonymous' }}</div>
+        <div class="when">{{ it.timestamp | date:'short' }}</div>
+      </div>
+      <div class="message">{{ it.message }}</div>
+      <div *ngIf="it.fileDataUrl" class="attachment">
+        <a [href]="it.fileDataUrl" target="_blank" rel="noopener">View image</a>
+        <a [href]="it.fileDataUrl" [attr.download]="it.fileName || ('feedback-' + it.id + '.png')">Download</a>
+        <img [src]="it.fileDataUrl" alt="screenshot" />
+      </div>
+      <div class="actions"><button class="btn" (click)="remove(it.id)">Remove</button></div>
+    </li>
+  </ul>
+</section>

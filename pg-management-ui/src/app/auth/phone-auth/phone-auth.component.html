@@ -1,0 +1,13 @@
+<section class="phone-auth card">
+  <div class="card-header"><h4>Phone Sign-in (Firebase demo)</h4><small class="muted">Use test phone numbers in Firebase for local testing</small></div>
+  <div class="card-body">
+    <div class="field"><label>Phone number</label><input [(ngModel)]="phone" placeholder="+1 555 555 0100" /></div>
+    <div id="recaptcha-container" #recaptcha></div>
+    <div class="actions"><button class="btn primary" (click)="sendOtp()">Send OTP</button></div>
+
+    <div class="field"><label>OTP code</label><input [(ngModel)]="code" placeholder="123456" /></div>
+    <div class="actions"><button class="btn primary" (click)="verifyCode()">Verify</button></div>
+
+    <div class="status muted">{{ status }}</div>
+  </div>
+</section>

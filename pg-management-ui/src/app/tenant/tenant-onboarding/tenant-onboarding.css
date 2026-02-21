@@ -1,0 +1,5 @@
+.card{padding:16px;border:1px solid #ddd;border-radius:8px;max-width:640px}
+.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}
+.field input{padding:10px;border:1px solid #ccc;border-radius:6px}
+.actions{margin-top:12px}
+.status{margin-top:12px;color:#555}

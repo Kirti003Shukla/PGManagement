@@ -1,0 +1,8 @@
+.admin-feedback { padding:8px 0; }
+.admin-feedback .list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; }
+.admin-feedback .item { background:var(--surface); border:1px solid rgba(15,23,42,0.04); padding:12px; border-radius:10px; }
+.admin-feedback .meta { display:flex; justify-content:space-between; gap:10px; font-weight:700; }
+.admin-feedback .message { margin:8px 0; color: #0b1220; }
+.admin-feedback .attachment img { max-width:240px; border-radius:8px; display:block; margin-top:8px; }
+.admin-feedback .actions { margin-top:8px; }
+.admin-feedback a { margin-right:10px; color:var(--primary); font-weight:700; }

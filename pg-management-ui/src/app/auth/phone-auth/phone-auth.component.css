@@ -1,0 +1,5 @@
+.phone-auth { max-width:420px; margin:12px; }
+.phone-auth .field { display:flex; flex-direction:column; gap:6px; margin-bottom:8px; }
+.phone-auth input { padding:8px 10px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); }
+.phone-auth .actions { display:flex; gap:8px; }
+.phone-auth .status { margin-top:8px; }

@@ -1,0 +1,30 @@
+<section class="feedback-card card">
+  <div class="card-header">
+    <h4>Send Feedback</h4>
+    <small class="muted">Attach a screenshot (optional) and a short message</small>
+  </div>
+  <div class="card-body">
+    <div class="field">
+      <label>Your name (optional)</label>
+      <input type="text" [(ngModel)]="name" placeholder="Your name" />
+    </div>
+
+    <div class="field">
+      <label>Message</label>
+      <textarea rows="3" [(ngModel)]="message" placeholder="Describe the issue or feedback"></textarea>
+    </div>
+
+    <div class="field">
+      <label>Screenshot (image files)</label>
+      <input id="fb-file" type="file" accept="image/*" (change)="onFileChange($event)" />
+      <div *ngIf="previewDataUrl" class="preview">
+        <img [src]="previewDataUrl" alt="preview" />
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" (click)="submit()" [disabled]="submitting">Send Feedback</button>
+      <div class="status">{{ success }}</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<div class="layout">
+  <aside class="sidebar">
+    <nav>
+        <section class="menu-section" *ngIf ="roleService.getRole()=='Admin'">
+          <h4>Admin Menu</h4>
+          <ul>
+            <li><a routerLink="/admin/pending-users">Tenants</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a routerLink="/admin/feedback">Feedback</a></li>
+          </ul>
+        </section>
+        <section class="menu-section" *ngIf ="roleService.getRole()=='Tenant'">
+          <h4>Tenant Menu</h4>
+          <ul>
+            <li><a href="#">My Room</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a routerLink="/feedback">Feedback</a></li>
+          </ul>
+        </section>
+      <button (click)="logout()">Logout</button>
+
+    </nav>
+    <app-utilities></app-utilities>
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

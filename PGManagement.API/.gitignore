@@ -1,0 +1,3 @@
+appsettings.Local.json
+firebase-service-account.json
+*.p12

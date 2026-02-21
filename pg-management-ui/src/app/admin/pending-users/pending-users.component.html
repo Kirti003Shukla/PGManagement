@@ -1,0 +1,29 @@
+<section class="card">
+  <div class="header">
+    <h2>Pending Tenant Users</h2>
+    <button class="btn" (click)="refresh()">Refresh</button>
+  </div>
+
+  <p *ngIf="loading">Loading...</p>
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <table *ngIf="!loading" class="table">
+    <thead>
+      <tr>
+        <th>Phone</th>
+        <th>Requested</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.phoneNumber }}</td>
+        <td>{{ item.createdAtUtc || '-' }}</td>
+        <td><button class="btn primary" (click)="approve(item)">Approve</button></td>
+      </tr>
+      <tr *ngIf="items.length === 0">
+        <td colspan="3">No pending users.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

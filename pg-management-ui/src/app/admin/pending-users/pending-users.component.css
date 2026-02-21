@@ -1,0 +1,5 @@
+.card{padding:16px;border:1px solid #ddd;border-radius:8px}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+.error{color:#b00020}

@@ -1,0 +1,38 @@
+<section class="utilities">
+  <h3>Utilities</h3>
+
+  <div class="utilities-grid single">
+    <article class="card washing">
+      <div class="card-header">
+        <h4>Washing Machines</h4>
+        <small class="muted">Live status • updates every 10 seconds</small>
+      </div>
+      <div class="card-body machines">
+        <div *ngFor="let m of displayMachines()" class="machine">
+          <div class="machine-top">
+            <div class="machine-id">{{ m.machineName }}</div>
+            <span class="badge" [ngClass]="m.isAvailable ? 'available' : 'busy'">{{ formatInUseStatus(m) }}</span>
+          </div>
+
+          <div class="machine-meta">
+            <div class="meta-row">
+              <span class="meta-label">Status</span>
+              <span class="meta-value">{{ m.isAvailable ? 'Available' : 'Busy' }}</span>
+            </div>
+            <div class="meta-row" *ngIf="!m.isAvailable">
+              <span class="meta-label">Remaining</span>
+              <span class="meta-value">{{ remainingLabel(m) }}</span>
+            </div>
+          </div>
+
+          <div class="machine-actions">
+            <button class="btn primary" *ngIf="canStart(m)" (click)="start(m.machineId)">Start</button>
+            <button class="btn" *ngIf="canComplete(m)" (click)="complete(m.machineId)">Complete</button>
+            <button class="btn" *ngIf="isUsedByAnotherTenant(m)" disabled>In Use by Other Tenant</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</section>
